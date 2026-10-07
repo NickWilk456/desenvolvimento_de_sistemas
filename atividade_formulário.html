@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Formulário</title>
+  
+  <style>
+    .container {
+      display: flex;
+      flex-direction: row;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+  </style>
+  
+</head>
+
+<body>
+  <form action="aula_input" method="post">
+    <div class="container">
+      <div>
+        <label for="nome">Nome</label>
+        <input type="text">
+      </div>
+      <div>
+        <label for="idade">Idade</label>
+        <input type="number">
+      </div>
+      <div>
+        <label for="email">E-mail</label>
+        <input type="email">
+      </div>
+      <div>
+        Como você conheceu nosso site?
+      </div>
+      <div>
+        <label for="google">Google</label>
+        <input type="radio" nome="opcao" value="google">
+        
+        <label for="insta">Instagram</label>
+        <input type="radio" nome="opcao" value="insta">
+        
+        <label for="bobo">Indicação</label>
+        <input type="radio" nome="opcao" value="indi">
+        
+        <label for="outro">Outros</label>
+        <input type="radio" nome="opcao" value="other">
+      </div>
+      
+      <div>
+        Quais assuntos você gosta?
+      </div>
+      
+      <div>
+        <label for="TI">Tecnologia</label>
+        <input type="checkbox">
+      </div>
+      <div>
+        <label for="DEV">Programação</label>
+        <input type="checkbox">
+      </div>
+      <div>
+        <label for="Des">Design</label>
+        <input type="checkbox">
+      </div>
+      <div>
+        <label for="BDD">Banco de dados</label>
+        <input type="checkbox">
+      </div>
+      <div>
+        Avaliação:
+      </div>
+      <div>
+        <input type="range">
+      </div>
+      Comentários:
+    </div>
+  </form>
+</body>
+
+</html>
