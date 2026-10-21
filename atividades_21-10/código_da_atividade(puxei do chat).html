@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios de JavaScript</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f0f2f5;
+            margin: 0;
+            padding: 20px;
+        }
+
+        main {
+            max-width: 600px;
+            margin: auto;
+        }
+
+        section {
+            background: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 12px;
+            box-shadow: 0 3px 10px #00000012;
+        }
+
+        h1 {
+            text-align: center;
+            color: #202938;
+        }
+
+        h2 {
+            color: #2563eb;
+        }
+
+        input {
+            box-sizing: border-box;
+            width: 100%;
+            padding: 12px;
+            margin: 6px 0 12px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 16px;
+        }
+
+        button {
+            padding: 11px 16px;
+            border: none;
+            border-radius: 6px;
+            background: #2563eb;
+            color: white;
+            font-size: 15px;
+            cursor: pointer;
+            margin: 3px;
+        }
+
+        button:hover {
+            background: #1d4ed8;
+        }
+
+        .resultado {
+            margin-top: 15px;
+            font-weight: bold;
+            overflow-wrap: anywhere;
+        }
+
+        .operacoes {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+        }
+    </style>
+</head>
+
+<body>
+<main>
+    <h1>Exercícios de JavaScript</h1>
+
+    <!-- EXERCÍCIO 1 -->
+    <section>
+        <h2>1. Saudação</h2>
+
+        <label for="nome">Nome:</label>
+        <input id="nome" type="text"
+               placeholder="Digite seu nome">
+
+        <button onclick="saudar()">Saudar</button>
+
+        <p id="resultadoSaudacao" class="resultado"></p>
+    </section>
+
+    <!-- EXERCÍCIO 2 -->
+    <section>
+        <h2>2. Par ou ímpar</h2>
+
+        <label for="numeroPar">Número:</label>
+        <input id="numeroPar" type="number"
+               step="1" placeholder="Digite um inteiro">
+
+        <button onclick="verificarPar()">Verificar</button>
+
+        <p id="resultadoPar" class="resultado"></p>
+    </section>
+
+    <!-- EXERCÍCIO 3 -->
+    <section>
+        <h2>3. Média do aluno</h2>
+
+        <label for="nota1">Nota 1:</label>
+        <input id="nota1" type="number"
+               min="0" max="10" step="0.1">
+
+        <label for="nota2">Nota 2:</label>
+        <input id="nota2" type="number"
+               min="0" max="10" step="0.1">
+
+        <label for="nota3">Nota 3:</label>
+        <input id="nota3" type="number"
+               min="0" max="10" step="0.1">
+
+        <button onclick="calcularMedia()">Calcular</button>
+
+        <p id="resultadoMedia" class="resultado"></p>
+    </section>
+
+    <!-- EXERCÍCIO 4 -->
+    <section>
+        <h2>4. Calculadora</h2>
+
+        <label for="numero1">Número 1:</label>
+        <input id="numero1" type="number"
+               step="any" placeholder="Primeiro número">
+
+        <label for="numero2">Número 2:</label>
+        <input id="numero2" type="number"
+               step="any" placeholder="Segundo número">
+
+        <div class="operacoes">
+            <button onclick="calcular('+')">+</button>
+            <button onclick="calcular('-')">−</button>
+            <button onclick="calcular('*')">×</button>
+            <button onclick="calcular('/')">÷</button>
+        </div>
+
+        <p id="resultadoCalculadora" class="resultado">
+            Resultado:
+        </p>
+    </section>
+</main>
+
+<script>
+    // EXERCÍCIO 1: SAUDAÇÃO
+    function saudar() {
+        const nome = document.getElementById("nome")
+            .value.trim();
+
+        const resultado =
+            document.getElementById("resultadoSaudacao");
+
+        if (nome === "") {
+            resultado.textContent =
+                "Por favor, digite seu nome.";
+            return;
+        }
+
+        resultado.textContent = "Olá, " + nome + "!";
+    }
+
+    // EXERCÍCIO 2: PAR OU ÍMPAR
+    function verificarPar() {
+        const campo = document.getElementById("numeroPar");
+        const resultado =
+            document.getElementById("resultadoPar");
+
+        if (campo.value.trim() === "") {
+            resultado.textContent =
+                "Digite um número inteiro.";
+            return;
+        }
+
+        const numero = Number(campo.value);
+
+        if (!Number.isSafeInteger(numero)) {
+            resultado.textContent =
+                "Digite um número inteiro válido.";
+            return;
+        }
+
+        if (numero % 2 === 0) {
+            resultado.textContent = "O número é par.";
+        } else {
+            resultado.textContent = "O número é ímpar.";
+        }
+    }
+
+    // EXERCÍCIO 3: MÉDIA DO ALUNO
+    function calcularMedia() {
+        const campos = [
+            document.getElementById("nota1"),
+            document.getElementById("nota2"),
+            document.getElementById("nota3")
+        ];
+
+        const resultado =
+            document.getElementById("resultadoMedia");
+
+        if (campos.some(campo => campo.value.trim() === "")) {
+            resultado.textContent =
+                "Preencha todas as notas.";
+            return;
+        }
+
+        const notas = campos.map(campo => Number(campo.value));
+
+        if (notas.some(nota =>
+            !Number.isFinite(nota) ||
+            nota < 0 || nota > 10
+        )) {
+            resultado.textContent =
+                "As notas devem estar entre 0 e 10.";
+            return;
+        }
+
+        const media =
+            (notas[0] + notas[1] + notas[2]) / 3;
+
+        const situacao = media >= 7
+            ? "Aprovado"
+            : "Reprovado";
+
+        resultado.textContent =
+            "Média: " + media.toFixed(2) +
+            " — " + situacao + ".";
+    }
+
+    // EXERCÍCIO 4: CALCULADORA
+    function calcular(operacao) {
+        const campo1 = document.getElementById("numero1");
+        const campo2 = document.getElementById("numero2");
+
+        const resultado =
+            document.getElementById("resultadoCalculadora");
+
+        if (campo1.value.trim() === "" ||
+            campo2.value.trim() === "") {
+            resultado.textContent =
+                "Preencha os dois números.";
+            return;
+        }
+
+        const n1 = Number(campo1.value);
+        const n2 = Number(campo2.value);
+
+        let valor;
+
+        switch (operacao) {
+            case "+":
+                valor = n1 + n2;
+                break;
+
+            case "-":
+                valor = n1 - n2;
+                break;
+
+            case "*":
+                valor = n1 * n2;
+                break;
+
+            case "/":
+                if (n2 === 0) {
+                    resultado.textContent =
+                        "Não é possível dividir por zero.";
+                    return;
+                }
+
+                valor = n1 / n2;
+                break;
+        }
+
+        if (!Number.isFinite(valor)) {
+            resultado.textContent =
+                "O resultado está fora do limite numérico.";
+            return;
+        }
+
+        resultado.textContent =
+            "Resultado: " + valor;
+    }
+</script>
+</body>
+</html>
