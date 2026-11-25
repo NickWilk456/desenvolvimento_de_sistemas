@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Primeiros Exercícios</title>
+    <link rel="stylesheet" href="../css/style.css">
+  </head>
+  <body data-pagina="exercicios" data-raiz="../">
+    <header><h1>Sobre o violão</h1></header>
+    <nav id="menu"></nav>
+    <main>
+  <section class="cartao">
+    <h2>Nota misteriosa</h2>
+    <p>Ouça a nota e procure no braço onde ela está. Os nomes estão escondidos para você usar o ouvido. Se errar, o site diz se você deve ir para um som mais grave ou mais agudo.</p>
+    <button class="botao" id="btn-ouvir-misteriosa">▶ Ouvir nota</button>
+    <button class="botao" id="btn-dica-misteriosa">💡 Dica</button>
+    <button class="botao" id="btn-nomes">👁 Mostrar / ocultar nomes</button>
+    <div class="area-braco braco-oculto" id="braco"></div>
+    <p id="info-casa" style="display: none;"></p>
+    <p id="resultado-misteriosa"></p>
+    <p>Pontuação: <span id="placar-misteriosa">0 / 0</span></p>
+  </section>
+  
+  <section class="cartao">
+    <h2>Repita a sequência</h2>
+    <p>Ouça 3 notas e reproduza no teclado, na mesma ordem.</p>
+    <button class="botao" id="btn-ouvir-sequencia">▶ Ouvir sequência</button>
+    <div id="teclado-sequencia"></div>
+    <p id="resultado-sequencia"></p>
+    <p>Pontuação: <span id="placar-sequencia">0 / 0</span></p>
+  </section>
+</main>
+    <script src="../js/main.js"></script>
+    <script src="../js/exercicios.js"></script>
+  </body>
+</html>

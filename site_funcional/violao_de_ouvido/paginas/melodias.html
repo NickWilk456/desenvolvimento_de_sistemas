@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Melodias</title>
+    <link rel="stylesheet" href="../css/style.css">
+  </head>
+  <body data-pagina="melodias" data-raiz="../">
+    <header><h1>Sobre o violão</h1></header>
+    <nav id="menu"></nav>
+    <main>
+  <section class="cartao">
+    <h2>Biblioteca de melodias</h2>
+    <p>Ouça cada melodia com ▶ ou escolha 👣 para aprender nota por nota. Todas se tocam na 1ª corda.</p>
+    <label for="andamento">Andamento: <strong id="valor-andamento">100 bpm</strong></label>
+    <input type="range" id="andamento" min="60" max="160" step="10" value="100">
+    <div id="lista-melodias"></div>
+  </section>
+  
+  <section class="cartao">
+    <h2>Passo a passo: <span id="titulo-passo">nenhuma melodia escolhida</span></h2>
+    <p>Ouça a nota, procure no violão e só depois avance. O site diz onde ela está.</p>
+    <button class="botao" id="btn-proxima">⏭ Próxima nota</button>
+    <button class="botao" id="btn-reiniciar-passo">↺ Reiniciar</button>
+    <p id="info-passo"><em>Escolha uma melodia na lista acima.</em></p>
+  </section>
+  
+  <section class="cartao">
+    <h2>Que melodia é essa?</h2>
+    <p>O site toca o começo de uma melodia. Descubra qual é.</p>
+    <button class="botao" id="btn-ouvir-melodia">▶ Ouvir trecho</button>
+    <div id="opcoes-melodia"></div>
+    <p id="resultado-melodia"></p>
+    <p>Pontuação: <span id="placar-melodia">0 / 0</span></p>
+  </section>
+</main>
+    <script src="../js/main.js"></script>
+    <script src="../js/exercicios.js"></script>
+  </body>
+</html>

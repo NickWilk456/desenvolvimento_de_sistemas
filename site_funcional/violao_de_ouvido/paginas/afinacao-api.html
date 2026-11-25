@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>API de Afinação</title>
+    <link rel="stylesheet" href="../css/style.css">
+  </head>
+  <body data-pagina="afinacao" data-raiz="../">
+    <header><h1>Sobre o violão</h1></header>
+    <nav id="menu"></nav>
+    <main>
+  <section class="cartao">
+    <h2>Referência: afinação padrão</h2>
+    <p>Toque em uma corda para ouvir a nota de referência e afine o violão por comparação.</p>
+    <div id="referencias-cordas"></div>
+    <button class="botao" id="btn-diapasao">🎵 Lá 440 Hz (diapasão)</button>
+  </section>
+
+  <section class="cartao">
+    <h2>Afinador com microfone</h2>
+    <p>Toque uma corda solta, perto do aparelho, em um lugar silencioso. O site descobre a nota e diz se a corda está alta ou baixa.</p>
+    <button class="botao" id="btn-afinador">🎤 Ligar afinador</button>
+    <p id="status-afinador"></p>
+    <div class="nota-grande" id="nota-detectada">—</div>
+    <p id="freq-detectada"></p>
+    <div id="medidor"><div id="ponteiro"></div></div>
+    <p id="dica-afinador"></p>
+  </section>
+
+  <section class="cartao">
+    <h2>Frequências das notas (4ª oitava)</h2>
+    <div id="tabela-frequencias"></div>
+  </section>
+</main>
+    <script src="../js/main.js"></script>
+    <script src="../js/exercicios.js"></script>
+    <script src="../js/api.js"></script>
+  </body>
+</html>

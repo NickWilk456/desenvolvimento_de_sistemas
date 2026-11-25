@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Conhecendo o violão</title>
+    <link rel="stylesheet" href="../css/style.css">
+  </head>
+  <body data-pagina="violao" data-raiz="../">
+    <header><h1>Sobre o violão</h1></header>
+    <nav id="menu"></nav>
+    <main>
+      <section class="cartao">
+      <h2>As 6 cordas</h2>
+      <p>A afinação padrão, da mais grossa e grave (6ª) para a mais fina e aguda (1ª), é: Mi, Lá, Ré, Sol, Si, Mi.</p>
+      <div id="cordas"></div>
+      <p id="info-corda"><em>Toque em uma corda para ouvir.</em></p>
+      </section>
+  
+      <section class="cartao">
+        <h2>Qual corda é essa?</h2>
+        <p>Ouça uma corda sorteada e diga qual é pelo som: grave é a 6ª, aguda é a 1ª.</p>
+        <button class="botao" id="btn-ouvir-corda">▶ Ouvir corda</button>
+        <p>Qual é?</p>
+        <div id="opcoes-corda"></div>
+        <p id="resultado-corda"></p>
+        <p>Pontuação: <span id="placar-corda">0 / 0</span></p>
+      </section>
+    </main>
+    <script src="../js/main.js"></script>
+    <script src="../js/exercicios.js"></script>
+  </body>
+</html>

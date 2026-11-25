@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Acordes</title>
+    <link rel="stylesheet" href="../css/style.css">
+  </head>
+  <body data-pagina="acordes" data-raiz="../">
+    <header><h1>Sobre o violão</h1></header>
+    <nav id="menu"></nav>
+    <main>
+  <section class="cartao">
+    <h2>Acordes abertos</h2>
+    <p>Toque em um acorde para ouvi-lo e ver as casas. Os números vão da 6ª corda (grave) para a 1ª (aguda), e x significa corda abafada, que não se toca.</p>
+    <div id="lista-acordes"></div>
+    <h3 id="detalhe-acorde">Escolha um acorde</h3>
+    <p id="cifra-acorde"></p>
+    <p id="detalhe-casas"></p>
+  </section>
+  
+  <section class="cartao">
+    <h2>Construa um acorde</h2>
+    <p>Um acorde maior usa as notas 0, 4 e 7 semitons acima da raiz, e o menor usa 0, 3 e 7. Só a terça muda!</p>
+    <p>
+      <label for="raiz-acorde">Raiz:</label>
+      <select id="raiz-acorde"></select>
+      <label for="qualidade-acorde">Tipo:</label>
+      <select id="qualidade-acorde">
+        <option value="maior">Maior</option>
+        <option value="menor">Menor</option>
+      </select>
+    </p>
+    <button class="botao" id="btn-junto">▶ Tocar junto</button>
+    <button class="botao" id="btn-arpejo">▶ Tocar em arpejo</button>
+    <p id="notas-acorde"><em>Escolha a raiz e o tipo.</em></p>
+  </section>
+  
+  <section class="cartao">
+    <h2>Maior ou menor?</h2>
+    <p>Ouça o acorde e diga se ele soa maior (mais aberto, alegre) ou menor (mais fechado, triste).</p>
+    <button class="botao" id="btn-ouvir-triade">▶ Ouvir acorde</button>
+    <button class="botao" id="btn-maior">Maior</button>
+    <button class="botao" id="btn-menor">Menor</button>
+    <p id="resultado-triade"></p>
+    <p>Pontuação: <span id="placar-triade">0 / 0</span></p>
+  </section>
+</main>
+    <script src="../js/main.js"></script>
+    <script src="../js/exercicios.js"></script>
+  </body>
+</html>

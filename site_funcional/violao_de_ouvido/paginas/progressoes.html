@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Progressões</title>
+    <link rel="stylesheet" href="../css/style.css">
+  </head>
+  <body data-pagina="progressoes" data-raiz="../">
+    <header><h1>Sobre o violão</h1></header>
+    <nav id="menu"></nav>
+    <main>
+  <section class="cartao">
+    <h2>Progressões comuns em Mi</h2>
+    <p>Os números romanos indicam a posição do acorde na escala: I é o acorde "de casa", IV é o da 4ª nota e V é o da 5ª. Minúsculo (i, iv) é acorde menor. Toque em ▶ para ouvir e acompanhe na faixa.</p>
+    <label for="bpm-prog">Andamento: <strong id="valor-bpm-prog">80 bpm</strong></label>
+    <input type="range" id="bpm-prog" min="50" max="140" step="5" value="80">
+    <div id="palco-progressao"></div>
+    <div id="lista-progressoes"></div>
+  </section>
+  
+  <section class="cartao">
+    <h2>Qual progressão é essa?</h2>
+    <p>Ouça a sequência sem ver os acordes e escolha qual é. Preste atenção em quando a música "volta para casa".</p>
+    <button class="botao" id="btn-ouvir-prog">▶ Ouvir progressão</button>
+    <div id="opcoes-prog"></div>
+    <p id="resultado-prog"></p>
+    <p>Pontuação: <span id="placar-prog">0 / 0</span></p>
+  </section>
+  
+  <section class="cartao">
+    <h2>Monte a sua progressão</h2>
+    <p>Toque nos acordes para montar uma sequência de até 8 e depois ouça o resultado.</p>
+    <div id="botoes-acordes"></div>
+    <p id="minha-prog">Nenhum acorde ainda.</p>
+    <button class="botao" id="btn-tocar-minha">▶ Tocar</button>
+    <button class="botao" id="btn-limpar-minha">🗑 Limpar</button>
+  </section>
+</main>
+    <script src="../js/main.js"></script>
+    <script src="../js/exercicios.js"></script>
+  </body>
+</html>

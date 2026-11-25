@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Escalas</title>
+    <link rel="stylesheet" href="../css/style.css">
+  </head>
+  <body data-pagina="escalas" data-raiz="../">
+    <header><h1>Escalas Musicais</h1></header>
+    <nav id="menu"></nav>
+    <main>
+  <section class="cartao">
+    <h2>Escala de Mi maior</h2>
+    <p>Sete notas e a oitava: Mi, Fá#, Sol#, Lá, Si, Dó#, Ré#, Mi. O padrão de distâncias é tom, tom, semitom, tom, tom, tom, semitom.</p>
+    <div id="escala-mi"></div>
+    <button class="botao" id="btn-subir">⬆ Escala subindo</button>
+    <button class="botao" id="btn-descer">⬇ Escala descendo</button>
+  </section>
+  
+  <section class="cartao">
+    <h2>A escala no braço</h2>
+    <p>Marque onde estão as notas da escala nas casas 0 a 5 e toque para ouvir.</p>
+    <button class="botao" id="btn-marcar">🎯 Mostrar / ocultar escala</button>
+    <div class="area-braco" id="braco"></div>
+    <p id="info-casa"><em>Toque em uma casa.</em></p>
+  </section>
+  
+  <section class="cartao">
+    <h2>Qual grau é esse?</h2>
+    <p>O site toca o Mi (grau 1) como referência e depois uma nota da escala. Compare e descubra o grau.</p>
+    <button class="botao" id="btn-ouvir-grau">▶ Ouvir nota</button>
+    <p>Qual grau?</p>
+    <div id="opcoes-grau"></div>
+    <p id="resultado-grau"></p>
+    <p>Pontuação: <span id="placar-grau">0 / 0</span></p>
+  </section>
+</main>
+    <script src="../js/main.js"></script>
+    <script src="../js/exercicios.js"></script>
+  </body>
+</html>

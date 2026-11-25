@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+  <html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Intervalos</title>
+    <link rel="stylesheet" href="../css/style.css">
+  </head>
+  <body data-pagina="intervalos" data-raiz="../">
+    <header><h1>Intervalos Musicais</h1></header>
+    <nav id="menu"></nav>
+    <main>
+      <section class="cartao">
+        <h2>O que é um intervalo?</h2>
+        <p>É a distância entre duas notas, contada em semitons (cada casa do violão é um semitom). Toque em ▶ para ouvir cada intervalo a partir do Dó.</p>
+        <div id="lista-intervalos"></div>
+      </section>
+  
+      <section class="cartao">
+        <h2>Que intervalo é esse?</h2>
+        <p>Ouça as duas notas e escolha o intervalo. Use as dicas acima como apoio.</p>
+        <button class="botao" id="btn-ouvir-intervalo">▶ Ouvir intervalo</button>
+        <p>Qual é?</p>
+        <div id="opcoes-intervalo"></div>
+        <p id="resultado-intervalo"></p>
+        <p>Pontuação: <span id="placar-intervalo">0 / 0</span></p>
+      </section>
+    </main>
+    <script src="../js/main.js"></script>
+    <script src="../js/exercicios.js"></script>
+  </body>
+</html>

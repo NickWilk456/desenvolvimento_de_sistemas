@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Notas</title>
+    <link rel="stylesheet" href="../css/style.css">
+  </head>
+  <body data-pagina="notas" data-raiz="../">
+    <header><h1>Notas</h1></header>
+    <nav id="menu"></nav>
+    <main>
+      <section class="cartao">
+        <h2>O braço do violão</h2>
+        <p>Cada casa é um semitom acima da anterior. Toque nas casas para ouvir e ver a nota.</p>
+        <div class="area-braco" id="braco"></div>
+        <p id="info-casa"><em>Toque em uma casa.</em></p>
+      </section>
+  
+      <section class="cartao">
+        <h2>Encontre a nota</h2>
+        <p>O site mostra uma nota e você a procura no braço. Pode haver mais de um lugar certo!</p>
+        <button class="botao" id="btn-nova-nota">🎯 Sortear nota</button>
+        <p>Encontre: <span class="alvo" id="alvo-nota">—</span></p>
+        <p id="resultado-nota"></p>
+        <p>Pontuação: <span id="placar-nota">0 / 0</span></p>
+      </section>
+    </main>
+    <script src="../js/main.js"></script>
+    <script src="../js/exercicios.js"></script>
+  </body>
+</html>

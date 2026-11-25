@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>API de Teoria</title>
+    <link rel="stylesheet" href="../css/style.css">
+  </head>
+  <body data-pagina="teoria" data-raiz="../">
+    <header><h1>Sobre o violão</h1></header>
+    <nav id="menu"></nav>
+    <main>
+  <section class="cartao">
+    <h2>Consulte um conceito musical</h2>
+    <p>Pesquise na Wikipédia (em português) para aprofundar o que você viu nas aulas.</p>
+    <label for="campo-teoria">Termo:</label>
+    <input type="text" id="campo-teoria" placeholder="Ex.: intervalo musical">
+    <button class="botao" id="btn-buscar-teoria">🔍 Pesquisar</button>
+    <p>Atalhos:</p>
+    <div id="atalhos-teoria"></div>
+    <p id="status-teoria"></p>
+    <div id="resultados-teoria"></div>
+  </section>
+
+  <section class="cartao">
+    <h2>Resumo</h2>
+    <div id="resumo-teoria"><p><em>Escolha um resultado acima.</em></p></div>
+  </section>
+</main>
+    <script src="../js/main.js"></script>
+    <script src="../js/api.js"></script>
+  </body>
+</html>

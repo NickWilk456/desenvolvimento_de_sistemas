@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>API de Músicas</title>
+    <link rel="stylesheet" href="../css/style.css">
+  </head>
+  <body data-pagina="musicas" data-raiz="../">
+    <header><h1>Sobre o violão</h1></header>
+    <nav id="menu"></nav>
+    <main>
+  <section class="cartao">
+    <h2>Encontre músicas para treinar de ouvido</h2>
+    <p>Pesquise no banco de dados aberto MusicBrainz. Escolha uma música simples, ouça no YouTube e tente tirar a melodia no violão.</p>
+    <p>
+      <label for="tipo-musica">Buscar por:</label>
+      <select id="tipo-musica">
+        <option value="musica">Nome da música</option>
+        <option value="artista">Artista</option>
+      </select>
+    </p>
+    <label for="campo-musica">Termo:</label>
+    <input type="text" id="campo-musica" placeholder="Ex.: Greensleeves">
+    <button class="botao" id="btn-buscar-musica">🔍 Pesquisar</button>
+    <p>Atalhos (melodias das dicas de intervalos):</p>
+    <div id="atalhos-musica"></div>
+    <p id="status-musica"></p>
+    <div id="resultados-musica"></div>
+    <p><small>Dados: MusicBrainz (musicbrainz.org).</small></p>
+  </section>
+  
+  <section class="cartao">
+    <h2>⭐ Minha lista de estudo</h2>
+    <div id="lista-estudo"></div>
+  </section>
+</main>
+    <script src="../js/main.js"></script>
+    <script src="../js/exercicios.js"></script>
+  </body>
+</html>

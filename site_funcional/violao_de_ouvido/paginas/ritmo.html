@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ritmo</title>
+    <link rel="stylesheet" href="../css/style.css">
+  </head>
+  <body data-pagina="ritmo" data-raiz="../">
+    <header><h1>Sobre o violão</h1></header>
+    <nav id="menu"></nav>
+    <main>
+  <section class="cartao">
+    <h2>Metrônomo</h2>
+    <p>O metrônomo marca o pulso. A primeira batida de cada compasso é mais aguda.</p>
+    <label for="bpm-metronomo">Andamento: <strong id="valor-bpm">100 bpm</strong></label>
+    <input type="range" id="bpm-metronomo" min="40" max="200" step="5" value="100">
+    <p>
+      <label for="compasso">Compasso:</label>
+      <select id="compasso">
+        <option value="4">4/4</option>
+        <option value="3">3/4</option>
+        <option value="2">2/4</option>
+      </select>
+    </p>
+    <div id="bolinhas"></div>
+    <button class="botao" id="btn-metronomo">▶ Iniciar</button>
+  </section>
+  
+  <section class="cartao">
+    <h2>Padrões rítmicos</h2>
+    <p>Cada padrão tem 8 passos: ● é uma batida e · é uma pausa. Eles usam o andamento do metrônomo acima.</p>
+    <div id="lista-padroes"></div>
+  </section>
+  
+  <section class="cartao">
+    <h2>Que padrão é esse?</h2>
+    <button class="botao" id="btn-ouvir-padrao">▶ Ouvir padrão</button>
+    <div id="opcoes-padrao"></div>
+    <p id="resultado-padrao"></p>
+    <p>Pontuação: <span id="placar-padrao">0 / 0</span></p>
+  </section>
+  
+  <section class="cartao">
+    <h2>Tap tempo</h2>
+    <p>Bata no botão em um ritmo constante e descubra seu andamento.</p>
+    <button class="botao" id="btn-tap">👆 Bata aqui</button>
+    <p id="info-tap"><em>Comece a bater.</em></p>
+  </section>
+</main>
+    <script src="../js/main.js"></script>
+    <script src="../js/exercicios.js"></script>
+  </body>
+</html>

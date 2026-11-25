@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Treino Auditivo</title>
+    <link rel="stylesheet" href="../css/style.css">
+  </head>
+  <body data-pagina="treino" data-raiz="../">
+    <header><h1>Sobre o violão</h1></header>
+    <nav id="menu"></nav>
+    <main>
+  <section class="cartao" id="config-treino">
+    <h2>Escolha seu treino</h2>
+    <p>São 10 perguntas. O som toca sozinho e você responde pelo ouvido. No final, o site mostra seu resultado e indica o que revisar.</p>
+    <p>
+      <label for="categoria-treino">Categoria:</label>
+      <select id="categoria-treino">
+        <option value="misto">Misto (tudo)</option>
+        <option value="intervalo">Intervalos</option>
+        <option value="triade">Maior ou menor</option>
+        <option value="grau">Graus da escala de Mi</option>
+        <option value="direcao">Subiu ou desceu</option>
+      </select>
+    </p>
+    <p>Melhor pontuação: <strong id="melhor-treino">—</strong></p>
+    <button class="botao" id="btn-iniciar-treino">▶ Começar treino</button>
+  </section>
+  
+  <section class="cartao oculto" id="jogo-treino">
+    <p id="status-treino"></p>
+    <h2 id="enunciado-treino"></h2>
+    <button class="botao" id="btn-repetir-treino">🔁 Ouvir de novo</button>
+    <div id="opcoes-treino"></div>
+    <p id="feedback-treino"></p>
+    <button class="botao oculto" id="btn-proxima-treino">Próxima pergunta</button>
+  </section>
+  
+  <section class="cartao oculto" id="final-treino">
+    <h2>Resultado</h2>
+    <p id="resumo-treino"></p>
+    <p id="mensagem-treino"></p>
+    <p id="sugestao-treino"></p>
+    <button class="botao" id="btn-novo-treino">🔄 Treinar de novo</button>
+  </section>
+</main>
+    <script src="../js/main.js"></script>
+    <script src="../js/exercicios.js"></script>
+  </body>
+</html>
